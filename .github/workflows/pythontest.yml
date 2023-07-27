@@ -1,6 +1,6 @@
-name: Python Tests
+name: Test meeting-calculator.py
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -22,3 +22,7 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover -s tests -p '*_test.py'
+
+    - name: Test meeting-calculator.py
+      run: |
+        python meeting-calculator.py
